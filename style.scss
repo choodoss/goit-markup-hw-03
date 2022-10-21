@@ -1,14 +1,14 @@
 :root {
     --primary-color-hover: #2196F3;
     --primary-title-color: #212121;
-
-
+    --primary-text-color: #757575;
+    --primary-link-color: #757575;
+    --to-do__body-gap: 30px;
+    --footer-background: #2F303A;
 }
 
-* {
+ul {
     padding: 0;
-    margin: 0;
-    border: 0;
 }
 
 li {
@@ -22,43 +22,50 @@ a:hover {
 }
 
 a {
-    color: #757575;
+    color: var(--primary-link-color);
 }
 
 button {
     cursor: pointer;
+    border: 0px;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14px;
-    color: #757575;
+    color: var(--primary-text-color);
     background: #FFFFFF;
 }
 
 button,
 a,
+ul,
+p,
 h1,
 h2,
 h3,
 h4,
 h5 {
     letter-spacing: 0.03em;
+    margin: 0;
 }
 
 .container {
-    max-width: 1170px;
+    max-width: 1200px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 
 .header-nav__row {
-    height: 80px;
     display: flex;
     align-items: center;
 }
 
 .my-logo {
+    display: block;
+    margin-right: 93px;
+
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
@@ -75,9 +82,14 @@ h5 {
     display: flex;
 }
 
-.main-nav__item {}
+.main-nav__item:not(:last-child) {
+    margin-right: 50px;
+}
 
 .main__title {
+    display: block;
+    padding: 32px 0;
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -91,9 +103,12 @@ h5 {
 
 .contacts-list {
     display: flex;
+    margin-left: auto;
 }
 
-.contacts-nav__item {}
+.contacts-nav__item:not(:last-child) {
+    margin-right: 50px;
+}
 
 .main__title:focus,
 .main__title:hover {
@@ -104,7 +119,6 @@ h5 {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    line-height: 24px;
 }
 
 .phone {
@@ -114,7 +128,8 @@ h5 {
 }
 
 .hi-banner {
-    background: #2F303A;
+    background: url(/img/hi-banner__bg.jpg) 50% no-repeat;
+    margin: 0 0 94px 0;
 }
 
 .hi-banner__row {
@@ -132,6 +147,8 @@ h5 {
 }
 
 .hi-banner__title {
+    margin: 0 0 30px 0;
+
     font-weight: 900;
     text-align: center;
     font-size: 44px;
@@ -139,21 +156,20 @@ h5 {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #FFFFFF;
-    margin: 0 0 30px 0;
 }
 
 .hi-banner__button {
+    padding: 10px 32px;
+
     text-align: center;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
-    padding: 10px 32px;
     color: #FFFFFF;
     background: #2196F3;
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
 }
 
 .hi-banner__button:hover,
@@ -162,20 +178,17 @@ h5 {
 }
 
 .to-do {
-    margin: 94px 0;
+    margin: 0 0 94px 0;
 }
 
 .to-do__row {
     display: flex;
-    justify-content: space-between;
+    margin: 0 0 0 calc(-1*var(--to-do__body-gap));
 }
 
 .to-do__body {
-    margin: 0 30px 0 0;
-}
-
-.to-do__body:last-child {
-    margin: 0;
+    flex-basis: calc((100% / 4) - var(--to-do__body-gap));
+    margin: 0 0 0 var(--to-do__body-gap);
 }
 
 .examples-work__hidden-title,
@@ -185,21 +198,21 @@ h5 {
 }
 
 .to-do__title {
+    margin: 0 0 10px 0;
+
     font-size: inherit;
     font-weight: 700;
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--primary-title-color);
-    margin: 0 0 10px 0;
 }
 
 .to-do__text {
     line-height: 1.71;
-    letter-spacing: 0.03em;
 }
 
 .work-img {
-    padding: 0 0 94px 0;
+    margin: 0 0 94px 0;
 }
 
 .work-img__row {
@@ -208,8 +221,9 @@ h5 {
 }
 
 .work-img__title {
-    text-align: center;
     margin: 0 0 50px 0;
+
+    text-align: center;
 }
 
 .title {
@@ -223,11 +237,17 @@ h5 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0;
+}
+
+.work-img__img {
+    display: block;
 }
 
 .team {
-    background: #F5F4FA;
     padding: 94px 0;
+
+    background: #F5F4FA;
 }
 
 .team-list__row {
@@ -246,17 +266,19 @@ h5 {
 }
 
 .team__title {
-    text-align: center;
     margin: 0 0 50px 0;
+
+    text-align: center;
 }
 
 .name-title {
+    margin: 0 0 10px 0;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
     text-align: center;
     color: var(--primary-title-color);
-    margin: 0 0 10px 0;
 }
 
 .job-title {
@@ -269,7 +291,7 @@ h5 {
 //футер
 
 footer {
-    background: #2F303A;
+    background: var(--footer-background);
 }
 
 .fotter__body {
@@ -281,8 +303,9 @@ footer {
 }
 
 .address__body {
-    font-style: normal;
     margin: 20px 0 0 0;
+
+    font-style: normal;
 }
 
 .address__list {}
@@ -303,7 +326,7 @@ footer {
     color: rgba(255, 255, 255, 0.6);
 }
 
- .map {
+.map {
     line-height: 1.71;
     color: #FFFFFF;
 }
