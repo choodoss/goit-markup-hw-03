@@ -202,9 +202,10 @@ h5 {
     flex-basis: calc(100% / 4);
 }
 
-.to-do__body {
-    gap: 0 30px;
-}
+// розібратися з gap!!!!
+// .to-do__body {
+//     gap: 0 30px;
+// }
 
 // .to-do__body:not(:last-child) {
 //     margin-right: var(--to-do__body-gap);
