@@ -126,7 +126,7 @@ h5 {
 }
 
 .hi-banner {
-  background: url(/img/hi-banner__bg.jpg) 50% no-repeat;
+  background: url(./img/hi-banner__bg.jpg) 50% no-repeat;
   margin: 0 0 94px 0;
 }
 
@@ -179,14 +179,13 @@ h5 {
 
 .to-do__row {
   display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--to-do__body-gap));
 }
 
 .to-do__body {
-  flex-basis: 25%;
-}
-
-.to-do__body {
-  gap: 0 30px;
+  flex-basis: calc(25% - var(--to-do__body-gap));
+  margin-left: var(--to-do__body-gap);
 }
 
 .examples-work__hidden-title,
