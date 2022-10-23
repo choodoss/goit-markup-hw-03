@@ -3,8 +3,9 @@
     --primary-title-color: #212121;
     --primary-text-color: #757575;
     --primary-link-color: #757575;
-    --to-do__body-gap: 30px;
+    --primary-gap: 30px;
     --footer-background: #2F303A;
+    --primary-margin-bottom: 94px;
 }
 
 ul {
@@ -39,7 +40,6 @@ body {
 }
 
 button,
-a,
 ul,
 p,
 h1,
@@ -49,6 +49,10 @@ h4,
 h5 {
     letter-spacing: 0.03em;
     margin: 0;
+}
+
+a {
+    letter-spacing: 0.03em;
 }
 
 .container {
@@ -80,10 +84,7 @@ h5 {
 
 .main-nav__list {
     display: flex;
-}
-
-.main-nav__item:not(:last-child) {
-    margin-right: 50px;
+    gap: 50px;
 }
 
 .main__title {
@@ -104,10 +105,8 @@ h5 {
 .contacts-list {
     display: flex;
     margin-left: auto;
-}
-
-.contacts-nav__item:not(:last-child) {
-    margin-right: 50px;
+    gap: 50px;
+    transition-duration: 0.5s;
 }
 
 .main__title:focus,
@@ -119,35 +118,28 @@ h5 {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    transition-duration: 0.5s;
 }
 
 .phone {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    transition-duration: 0.5s;
 }
 
 .hi-banner {
     background: url(../img/hi-banner__bg.jpg) 50% no-repeat;
-    margin: 0 0 94px 0;
+    margin-bottom: var(--primary-margin-bottom);
 }
 
-.hi-banner__row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 600px;
-}
 
 .hi-banner__body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 200px 0;
 }
 
 .hi-banner__title {
-    margin: 0 0 30px 0;
+    margin-bottom: 30px;
 
     font-weight: 900;
     text-align: center;
@@ -159,7 +151,9 @@ h5 {
 }
 
 .hi-banner__button {
+    display: block;
     padding: 10px 32px;
+    margin: 0 auto;
 
     text-align: center;
     font-weight: 700;
@@ -170,6 +164,8 @@ h5 {
     background: #2196F3;
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    transition-duration: 0.3s;
 }
 
 .hi-banner__button:hover,
@@ -178,38 +174,19 @@ h5 {
 }
 
 .to-do {
-    margin-bottom: 94px;
-    // margin-bottom: 74px;
+    margin-bottom: var(--primary-margin-bottom);
 }
 
 .to-do__row {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    margin-left: calc(-1*var(--to-do__body-gap));
+    gap: var(--primary-gap);
 }
 
 .to-do__body {
-    // margin-bottom: 20px;
-    flex-basis: calc((100% / 4) - var(--to-do__body-gap));
-    margin-left: var(--to-do__body-gap);
+    flex-basis: calc((100% - (3*var(--primary-gap))) / 4);
 }
-
-// .to-do__row {
-//     display: flex;
-// }
-
-// .to-do__body {
-//     flex-basis: calc(100% / 4);
-// }
-
-// розібратися з gap!!!!
-// .to-do__body {
-//     gap: 0 30px;
-// }
-
-// .to-do__body:not(:last-child) {
-//     margin-right: var(--to-do__body-gap);
-// }
 
 .examples-work__hidden-title,
 .to-do__hiden-title {
@@ -232,16 +209,11 @@ h5 {
 }
 
 .work-img {
-    margin: 0 0 94px 0;
-}
-
-.work-img__row {
-    display: flex;
-    flex-wrap: wrap;
+    margin-bottom: var(--primary-margin-bottom);
 }
 
 .work-img__title {
-    margin: 0 0 50px 0;
+    margin-bottom: 50px;
 
     text-align: center;
 }
@@ -253,30 +225,37 @@ h5 {
     color: var(--primary-title-color);
 }
 
-.work-img-list__row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0;
-}
-
 .work-img__img {
     display: block;
+}
+
+.work-img-list__row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--primary-gap);
+}
+
+.work-img-list__item {
+    flex-basis: calc((100% - (2*var(--primary-gap))) / 3);
 }
 
 .team {
     padding: 94px 0;
 
-    background: #F5F4FA;
+    background-color: #F5F4FA;
 }
 
 .team-list__row {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: var(--primary-gap);
+
 }
 
 .team__body {
+    flex-basis: calc((100% - (3*var(--primary-gap))) / 4);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
@@ -318,24 +297,23 @@ footer {
     padding: 60px 0;
 }
 
+.fotter__body > .my-logo {
+margin-right: 0;
+margin-bottom: 20px;
+}
+
 .logo-white {
     color: #FFFFFF;
 }
 
 .address__body {
-    margin: 20px 0 0 0;
-
     font-style: normal;
 }
 
 .address__list {}
 
-.address__list__item {
-    margin: 0 0 9px 0;
-}
-
-.address__list__item:last-child {
-    margin: 0;
+.address__list__item:not(:last-child) {
+    margin-bottom: 9px;
 }
 
 .address__list__item .email,
@@ -349,6 +327,8 @@ footer {
 .map {
     line-height: 1.71;
     color: #FFFFFF;
+
+    transition-duration: 0.5s;
 }
 
 .map:focus,
@@ -363,24 +343,21 @@ footer {
 // портфолио
 
 .examples-work__navigation {
-    padding: 94px 0 64px 0;
+    padding: 94px 0;
 }
 
 .navigation {
-    margin: 0 0 50px 0;
+    margin-bottom: 50px;
 }
 
-.navigation-list__row {
+.navigation-list {
     display: flex;
     justify-content: center;
-}
-
-.navigation__item:not(:last-child) {
-    margin: 0 8px;
+    gap: 8px;
 }
 
 .button {
-    padding: 6px 25px;
+    padding: 6px 22px;
 
     font-family: inherit;
     font-weight: 500;
@@ -389,39 +366,51 @@ footer {
     text-align: center;
     color: var(--primary-title-color);
     background: #F5F4FA;
+    border-style: none;
     border-radius: 4px;
+
+    transition-duration: 0.5s;
 }
 
 .button:hover,
 .button:focus {
+    padding: 6px 25px;
+
     color: #FFFFFF;
     background: var(--primary-color-hover);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
 }
 
 .examples-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    gap: var(--primary-gap);
 }
 
 .example-item {
-    margin: 0 0 30px 0;
-
-    border: 1px solid #EEEEEE;
+    flex-basis: calc((100% / 2*var(--primary-gap)) / 3);
 }
 
 .example-item__body {
     padding: 20px 24px;
+
+    border: 1px solid #EEEEEE;
 }
 
 .example-item__title {
+    margin-bottom: 4px;
+
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--primary-title-color);
+}
+
+.example-item__img {
+    overflow: hidden;
+    display: block;
 }
 
 .example-item__description {
