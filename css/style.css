@@ -55,6 +55,10 @@ a {
   letter-spacing: 0.03em;
 }
 
+header {
+  border: 1px solid #ECECEC;
+}
+
 .container {
   max-width: 1200px;
   padding: 0 15px;
@@ -94,6 +98,7 @@ a {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-title-color);
+  transition-duration: 0.5s;
 }
 
 .current {
@@ -104,7 +109,6 @@ a {
   display: flex;
   margin-left: auto;
   gap: 50px;
-  transition-duration: 0.5s;
 }
 
 .main__title:focus,
@@ -126,12 +130,12 @@ a {
   transition-duration: 0.5s;
 }
 
-.hi-banner {
-  background: url(../img/hi-banner__bg.jpg) 50% no-repeat;
-  margin-bottom: var(--primary-margin-bottom);
+.section {
+  padding: 94px 0;
 }
 
-.hi-banner__body {
+.hi-banner {
+  background: url(https://github.com/choodoss/goit-markup-hw-03/blob/77ba38cb13f1df912c3f6b1d0ef248730a655b6e/img/hi-banner__bg.jpg?raw=true) 50% no-repeat;
   padding: 200px 0;
 }
 
@@ -167,28 +171,28 @@ a {
   background: #188CE8;
 }
 
-.to-do {
-  margin-bottom: var(--primary-margin-bottom);
+.features {
+  padding-bottom: 0;
 }
 
-.to-do__row {
+.features__row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: var(--primary-gap);
 }
 
-.to-do__body {
+.features__body {
   flex-basis: calc((100% - 3 * var(--primary-gap)) / 4);
 }
 
 .examples-work__hidden-title,
-.to-do__hiden-title {
+.features__hiden-title {
   font-size: 0;
   overflow: hidden;
 }
 
-.to-do__title {
+.features__title {
   margin: 0 0 10px 0;
   font-size: inherit;
   font-weight: 700;
@@ -197,12 +201,8 @@ a {
   color: var(--primary-title-color);
 }
 
-.to-do__text {
+.features__text {
   line-height: 1.71;
-}
-
-.work-img {
-  margin-bottom: var(--primary-margin-bottom);
 }
 
 .work-img__title {
@@ -233,7 +233,6 @@ a {
 }
 
 .team {
-  padding: 94px 0;
   background-color: #F5F4FA;
 }
 
@@ -323,10 +322,6 @@ footer {
   color: var(--primary-color-hover);
 }
 
-.examples-work__navigation {
-  padding: 94px 0;
-}
-
 .navigation {
   margin-bottom: 50px;
 }
@@ -367,7 +362,7 @@ footer {
 }
 
 .example-item {
-  flex-basis: calc(50% * var(--primary-gap) / 3);
+  flex: 1 1 calc(50% * var(--primary-gap) / 3);
 }
 
 .example-item__body {

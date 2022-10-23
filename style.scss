@@ -55,6 +55,10 @@ a {
     letter-spacing: 0.03em;
 }
 
+header {
+    border: 1px solid #ECECEC;
+}
+
 .container {
     max-width: 1200px;
     padding: 0 15px;
@@ -96,6 +100,8 @@ a {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--primary-title-color);
+
+    transition-duration: 0.5s;
 }
 
 .current {
@@ -106,7 +112,6 @@ a {
     display: flex;
     margin-left: auto;
     gap: 50px;
-    transition-duration: 0.5s;
 }
 
 .main__title:focus,
@@ -128,13 +133,12 @@ a {
     transition-duration: 0.5s;
 }
 
-.hi-banner {
-    background: url(../img/hi-banner__bg.jpg) 50% no-repeat;
-    margin-bottom: var(--primary-margin-bottom);
+.section {
+    padding: 94px 0;
 }
 
-
-.hi-banner__body {
+.hi-banner {
+    background: url(https://github.com/choodoss/goit-markup-hw-03/blob/77ba38cb13f1df912c3f6b1d0ef248730a655b6e/img/hi-banner__bg.jpg?raw=true) 50% no-repeat;
     padding: 200px 0;
 }
 
@@ -173,28 +177,28 @@ a {
     background: #188CE8;
 }
 
-.to-do {
-    margin-bottom: var(--primary-margin-bottom);
+.features {
+    padding-bottom: 0;
 }
 
-.to-do__row {
+.features__row {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: var(--primary-gap);
 }
 
-.to-do__body {
+.features__body {
     flex-basis: calc((100% - (3*var(--primary-gap))) / 4);
 }
 
 .examples-work__hidden-title,
-.to-do__hiden-title {
+.features__hiden-title {
     font-size: 0;
     overflow: hidden;
 }
 
-.to-do__title {
+.features__title {
     margin: 0 0 10px 0;
 
     font-size: inherit;
@@ -204,12 +208,8 @@ a {
     color: var(--primary-title-color);
 }
 
-.to-do__text {
+.features__text {
     line-height: 1.71;
-}
-
-.work-img {
-    margin-bottom: var(--primary-margin-bottom);
 }
 
 .work-img__title {
@@ -241,8 +241,6 @@ a {
 }
 
 .team {
-    padding: 94px 0;
-
     background-color: #F5F4FA;
 }
 
@@ -297,9 +295,9 @@ footer {
     padding: 60px 0;
 }
 
-.fotter__body > .my-logo {
-margin-right: 0;
-margin-bottom: 20px;
+.fotter__body>.my-logo {
+    margin-right: 0;
+    margin-bottom: 20px;
 }
 
 .logo-white {
@@ -341,10 +339,6 @@ margin-bottom: 20px;
 }
 
 // портфолио
-
-.examples-work__navigation {
-    padding: 94px 0;
-}
 
 .navigation {
     margin-bottom: 50px;
@@ -389,8 +383,16 @@ margin-bottom: 20px;
 }
 
 .example-item {
-    flex-basis: calc((100% / 2*var(--primary-gap)) / 3);
+    flex: 1 1 calc((100% / 2*var(--primary-gap)) / 3);
+
+    // transition-duration: 0.5s;
 }
+
+// .example-item:hover,
+// .example-item:focus {
+//     border: 1px solid #EEEEEE;
+//     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+// }
 
 .example-item__body {
     padding: 20px 24px;
