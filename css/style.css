@@ -55,6 +55,12 @@ a {
   letter-spacing: 0.03em;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 header {
   border: 1px solid #ECECEC;
 }
@@ -71,7 +77,7 @@ header {
 }
 
 .my-logo {
-  display: block;
+  display: inline-block;
   margin-right: 93px;
   font-family: "Raleway";
   font-weight: 700;
@@ -98,7 +104,6 @@ header {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-title-color);
-  transition-duration: 0.5s;
 }
 
 .current {
@@ -120,14 +125,12 @@ header {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  transition-duration: 0.5s;
 }
 
 .phone {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  transition-duration: 0.5s;
 }
 
 .section {
@@ -135,7 +138,6 @@ header {
 }
 
 .hi-banner {
-  background: url(https://github.com/choodoss/goit-markup-hw-03/blob/77ba38cb13f1df912c3f6b1d0ef248730a655b6e/img/hi-banner__bg.jpg?raw=true) 50% no-repeat;
   padding: 200px 0;
 }
 
@@ -163,7 +165,6 @@ header {
   background: #2196F3;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition-duration: 0.3s;
 }
 
 .hi-banner__button:hover,
@@ -186,10 +187,18 @@ header {
   flex-basis: calc((100% - 3 * var(--primary-gap)) / 4);
 }
 
-.examples-work__hidden-title,
-.features__hiden-title {
-  font-size: 0;
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
   overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: -1px;
 }
 
 .features__title {
@@ -205,20 +214,13 @@ header {
   line-height: 1.71;
 }
 
-.work-img__title {
+.title {
   margin-bottom: 50px;
   text-align: center;
-}
-
-.title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   color: var(--primary-title-color);
-}
-
-.work-img__img {
-  display: block;
 }
 
 .work-img-list__row {
@@ -244,18 +246,14 @@ header {
 }
 
 .team__body {
+  background-color: #FFFFFF;
   flex-basis: calc((100% - 3 * var(--primary-gap)) / 4);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
 .team-text {
-  margin: 30px 0;
-}
-
-.team__title {
-  margin: 0 0 50px 0;
-  text-align: center;
+  padding: 30px 0;
 }
 
 .name-title {
@@ -274,15 +272,12 @@ header {
   letter-spacing: 0.03em;
 }
 
-footer {
+.footer {
   background: var(--footer-background);
-}
-
-.fotter__body {
   padding: 60px 0;
 }
 
-.fotter__body > .my-logo {
+.container > .my-logo {
   margin-right: 0;
   margin-bottom: 20px;
 }
@@ -310,7 +305,6 @@ footer {
 .map {
   line-height: 1.71;
   color: #FFFFFF;
-  transition-duration: 0.5s;
 }
 
 .map:focus,
@@ -343,12 +337,10 @@ footer {
   background: #F5F4FA;
   border-style: none;
   border-radius: 4px;
-  transition-duration: 0.5s;
 }
 
 .button:hover,
 .button:focus {
-  padding: 6px 25px;
   color: #FFFFFF;
   background: var(--primary-color-hover);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -367,7 +359,10 @@ footer {
 
 .example-item__body {
   padding: 20px 24px;
-  border: 1px solid #EEEEEE;
+  background-color: #FFFFFF;
+  border-width: 0 1px 1px 1px;
+  border-style: solid;
+  border-color: #EEEEEE;
 }
 
 .example-item__title {
@@ -381,7 +376,6 @@ footer {
 
 .example-item__img {
   overflow: hidden;
-  display: block;
 }
 
 .example-item__description {
